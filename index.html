@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta http-equiv="content-language" content="vi">
+    <meta name="robots" content="index, follow">
+
+    <meta name="description" content="KEDO Tools - Cung cấp các dịch vụ và công cụ MMO hàng đầu">
+    <meta name="keywords" content="kedo tools, mmo tools, facebook tools, instagram tools, social media tools">
+
+    <!-- Open Graph data -->
+    <meta property="og:title" content="KEDO Tools - Dịch vụ và công cụ MMO chuyên nghiệp">
+    <meta property="og:type" content="Website">
+    <meta property="og:url" content="https://timgiare.top">
+    <meta property="og:image" content="https://s120-ava-talk.zadn.vn/0/7/b/9/38/120/a3a8a88d4801663da40acbb025fe160f.jpg">
+    <meta property="og:description" content="Cung cấp các công cụ MMO chuyên nghiệp cho Facebook, Instagram, Threads, Twitter, Zalo">
+    <meta property="og:site_name" content="KEDO Tools">
+
+    <link rel="icon" href="assets/default/images/adminfav.png">
+    <link rel="apple-touch-icon" href="assets/default/images/adminfav.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="assets/default/plugins/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="assets/default/plugins/select2/css/select2.min.css">
+    <link rel="stylesheet" href="assets/default/plugins/fancybox/fancybox.min.css">
+    <link rel="stylesheet" href="assets/default/fonts/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="assets/default/css/base.css?1691906155">
+    <link rel="stylesheet" href="assets/default/css/style.css?1691906155">
+    
+    <title>KEDO Tools - Dịch vụ và công cụ MMO chuyên nghiệp</title>
+    
+    <style>
+        :root {
+            --primary-color: #4e54c8;
+            --secondary-color: #8f94fb;
+            --accent-color: #ff6b6b;
+            --text-color: #333;
+            --light-bg: #f8f9fa;
+            --dark-bg: #343a40;
+        }
+        
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background: linear-gradient(to right, var(--secondary-color), var(--primary-color));
+            color: var(--text-color);
+            min-height: 100vh;
+            position: relative;
+            padding-bottom: 80px;
+        }
+        
+        .header {
+            background-color: rgba(255, 255, 255, 0.9) !important;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+            padding: 15px 0;
+        }
+        
+        .main {
+            padding: 20px 0;
+        }
+        
+        .profile-inner {
+            background-color: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .profile-avatar {
+            text-align: center;
+            position: relative;
+            margin-bottom: 20px;
+        }
+        
+        .profile-avatar img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 5px solid white;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            object-fit: cover;
+            transition: transform 0.3s;
+        }
+        
+        .profile-avatar img:hover {
+            transform: scale(1.05);
+        }
+        
+        .profile-title {
+            text-align: center;
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 30px;
+            color: var(--primary-color);
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+        }
+        
+        .profile-box {
+            margin-bottom: 25px;
+            background-color: white;
+            border-radius: 15px !important;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s, box-shadow 0.3s;
+            overflow: hidden;
+        }
+        
+        .profile-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .profile-box_content {
+            padding: 20px;
+            position: relative;
+        }
+        
+        .profile-box_content__title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+            color: var(--primary-color);
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--secondary-color);
+        }
+        
+        .profile-box_content__list p {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .profile-box_content__list p span {
+            margin-right: 10px;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--light-bg);
+            border-radius: 50%;
+            color: var(--primary-color);
+        }
+        
+        .profile-box_content__list p img {
+            width: 20px;
+            height: 20px;
+            object-fit: contain;
+        }
+        
+        .profile-box_content__list a {
+            color: var(--text-color);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .profile-box_content__list a:hover {
+            color: var(--accent-color);
+            text-decoration: underline;
+        }
+        
+        .profile-box_content__desc {
+            padding: 10px 0;
+            line-height: 1.6;
+        }
+        
+        .profile-box_content__image {
+            position: absolute;
+            right: 20px;
+            bottom: 20px;
+            opacity: 0.6;
+            width: 60px;
+            height: 60px;
+        }
+        
+        .profile-box_content__image img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+        
+        .key-display {
+            width: 100%;
+            padding: 15px;
+            background-color: rgba(255, 255, 255, 0.9);
+            border: 2px solid var(--primary-color);
+            border-radius: 10px;
+            font-size: 1.25rem;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+        
+        .key-display:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+        
+        .key-display code {
+            flex-grow: 1;
+            font-family: 'Courier New', monospace;
+            background-color: rgba(0, 0, 0, 0.05);
+            padding: 8px 12px;
+            border-radius: 5px;
+            overflow: auto;
+            white-space: nowrap;
+        }
+        
+        .copy-btn {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 8px 15px;
+            margin-left: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        .copy-btn:hover {
+            background-color: var(--secondary-color);
+        }
+        
+        .bank-info {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .bank-info li {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        
+        .bank-info img {
+            width: 25px;
+            height: 25px;
+            margin-right: 10px;
+        }
+        
+        .bank-info .account-name {
+            color: #ff0000;
+            font-weight: bold;
+        }
+        
+        .bank-info .copy-icon {
+            margin-left: 10px;
+            color: var(--primary-color);
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+        
+        .bank-info .copy-icon:hover {
+            color: var(--accent-color);
+        }
+        
+        .social-links {
+            display: flex;
+            justify-content: center;
+            margin-top: 30px;
+            gap: 15px;
+        }
+        
+        .social-links a {
+            width: 40px;
+            height: 40px;
+            background-color: var(--primary-color);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.3s, background-color 0.3s;
+        }
+        
+        .social-links a:hover {
+            transform: translateY(-3px);
+            background-color: var(--accent-color);
+        }
+        
+        footer {
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
+        
+        /* Animation for floating elements */
+        @keyframes float {
+            0% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+            100% {
+                transform: translateY(0px);
+            }
+        }
+        
+        .floating {
+            animation: float 5s ease-in-out infinite;
+        }
+        
+        /* Toast notification for copy success */
+        .toast-container {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 9999;
+        }
+        
+        .toast {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 15px 25px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            display: flex;
+            align-items: center;
+            opacity: 0;
+            transform: translateX(50px);
+            transition: opacity 0.3s, transform 0.3s;
+        }
+        
+        .toast.show {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        
+        .toast i {
+            margin-right: 10px;
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .profile-title {
+                font-size: 1.5rem;
+            }
+            
+            .profile-inner {
+                padding: 20px;
+            }
+            
+            .profile-avatar img {
+                width: 120px;
+                height: 120px;
+            }
+        }
+        
+        /* Snowflake animation improvements */
+        .snowflake {
+            font-size: 1.5em;
+            text-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+            filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.5));
+        }
+    </style>
+    
+    <script>
+        // Hàm lấy tham số từ URL
+        function getQueryParam(param) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(param);
+        }
+
+        // Toast notification function
+        function showToast(message) {
+            const toastContainer = document.getElementById('toast-container');
+            const toast = document.createElement('div');
+            toast.className = 'toast';
+            toast.innerHTML = `<i class="fas fa-check-circle"></i> ${message}`;
+            toastContainer.appendChild(toast);
+            
+            setTimeout(() => {
+                toast.classList.add('show');
+            }, 100);
+            
+            setTimeout(() => {
+                toast.classList.remove('show');
+                setTimeout(() => {
+                    toastContainer.removeChild(toast);
+                }, 300);
+            }, 3000);
+        }
+
+        // Copy to clipboard function
+        function copyToClipboard(text) {
+            navigator.clipboard.writeText(text).then(function() {
+                showToast('Đã sao chép vào clipboard!');
+            }, function(err) {
+                console.error('Could not copy text: ', err);
+            });
+        }
+
+        // Initialize when document is ready
+        document.addEventListener('DOMContentLoaded', function() {
+            // Load key from URL parameter
+            const key = getQueryParam("key") || "Link không hợp lệ";
+            document.getElementById("keyText").innerText = key;
+            
+            // Set up copy buttons
+            document.querySelectorAll('.copy-btn').forEach(button => {
+                button.addEventListener('click', function() {
+                    const textToCopy = this.getAttribute('data-copy');
+                    copyToClipboard(textToCopy);
+                });
+            });
+            
+            // Set up bank info copy
+            document.querySelectorAll('.copy-icon').forEach(icon => {
+                icon.addEventListener('click', function() {
+                    const textToCopy = this.getAttribute('data-copy');
+                    copyToClipboard(textToCopy);
+                });
+            });
+            
+            // Play background music
+            initBackgroundMusic();
+        });
+        
+        // Background music setup
+        function initBackgroundMusic() {
+            const musicList = [
+                "/nhac/trichtien.mp3",
+                "/nhac/pikachu.mp3",
+            ];
+            
+            let index = Math.floor(Math.random() * musicList.length);
+            const audio = new Audio(musicList[index]);
+            
+            // Set up click listener to start playing music
+            document.addEventListener("click", function playMusic() {
+                audio.play();
+                document.removeEventListener("click", playMusic);
+            }, { once: true });
+            
+            // Set up auto-play of next track
+            audio.addEventListener("ended", function() {
+                index = (index + 1) % musicList.length;
+                audio.src = musicList[index];
+                audio.play();
+            });
+        }
+    </script>
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header bg-white position-relative z-index-10" id="header">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-12 text-center">
+                    <div class="header-logo py-2">
+                        <img src="assets/default/images/adminfav.png" alt="KEDO Tools Logo" height="50">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div id="main" class="main">
+        <div class="section-profile py-5">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-md-12 col-lg-10">
+                        <div class="profile-inner">
+                            <!-- Profile Avatar -->
+                            <div class="profile-avatar">
+                                <img src="assets/default/images/m1UG0Bd.jpeg" alt="Profile Image" class="floating">
+                            </div>
+                            
+                            <!-- Profile Title -->
+                            <div class="profile-title">
+                                𝓛𝓮̂ 𝓥𝓪̆𝓷 𝓜𝓪̣𝓷𝓱 × 𝓠𝓾𝔂́ 𝓚𝓮𝓓𝓸 
+                                <img src="assets/default/images/verify.gif" alt="Đã Xác Minh" style="height: 23px;">
+                            </div>
+                            
+                            <!-- Social Links -->
+                            <div class="social-links">
+                                <a href="https://zalo.me/84367742346" target="_blank"><i class="fab fa-facebook-messenger"></i></a>
+                                <a href="https://zalo.me/g/uaahwq871" target="_blank"><i class="fas fa-users"></i></a>
+                                <a href="https://mlevip.blogspot.com/2025/02/huong-dan-su-dung-tool-body-font-family.html" target="_blank"><i class="fas fa-globe"></i></a>
+                                <a href="#" target="_blank"><i class="fab fa-telegram"></i></a>
+                            </div>
+                            
+                            <!-- Profile Boxes -->
+                            <div class="profile-boxs py-4">
+                                <div class="row">
+                                    <!-- Contact Info Box -->
+                                    <div class="col-md-6">
+                                        <div class="profile-box">
+                                            <div class="profile-box_content">
+                                                <div class="profile-box_content__title">
+                                                    <i class="fas fa-address-book me-2"></i> THÔNG TIN LIÊN HỆ CHÚNG TÔI
+                                                </div>
+                                                <div class="profile-box_content__list">
+                                                    <p>
+                                                        <span><i class="fab fa-facebook-f"></i></span> 
+                                                        <b>ZALO: </b>
+                                                        <a href="zalo.me/84367742346" target="_blank">
+                                                            𝓛𝓮̂ 𝓥𝓪̆𝓷 𝓜𝓪̣𝓷𝓱
+                                                        </a>
+                                                    </p>
+                                                    <p>
+                                                        <span><img src="assets/default/images/icons8-zalo-50.png" alt="Zalo"></span> 
+                                                        <b>NHÓM ZALO: </b>
+                                                        <a href="https://zalo.me/g/uaahwq871" target="_blank">
+                                                            Cộng đồng KEDO TOOLS
+                                                        </a>
+                                                    </p>
+                                                    <p>
+                                                        <span><i class="far fa-globe"></i></span> 
+                                                        <b>WEBSITE: </b>
+                                                        <a href="https://mlevip.blogspot.com/2025/02/huong-dan-su-dung-tool-body-font-family.html" target="_blank">
+                                                            KEDO-TOOLS
+                                                        </a>
+                                                    </p>
+                                                </div>
+                                                <div class="profile-box_content__image">
+                                                    <img src="assets/default/images/information.png" alt="Information">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Services Box -->
+                                    <div class="col-md-6">
+                                        <div class="profile-box">
+                                            <div class="profile-box_content">
+                                                <div class="profile-box_content__title">
+                                                    <i class="fas fa-server me-2"></i> DỊCH VỤ KEDO CUNG CẤP
+                                                </div>
+                                                <div class="profile-box_content__desc">
+                                                    <b>⭐ CUNG CẤP TOOL MMO (FACEBOOK, INSTAGRAM, THREADS, TWITTER, ZALO) - MUA KEY TOOL XIN LIÊN HỆ ADMIN ⭐</b>
+                                                    <p class="mt-3">
+                                                        Chúng tôi cung cấp các công cụ tự động hóa chất lượng cao, giúp bạn tối ưu hóa hoạt động trên các nền tảng mạng xã hội.
+                                                    </p>
+                                                </div>
+                                                <div class="profile-box_content__image">
+                                                    <img src="assets/default/images/ssl-certificate.png" alt="SSL Certificate">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Bank Info Box -->
+                                <div class="profile-box">
+                                    <div class="profile-box_content">
+                                        <div class="profile-box_content__title">
+                                            <i class="fas fa-money-check-alt me-2"></i> THÔNG TIN NGÂN HÀNG
+                                        </div>
+                                        <ul class="bank-info">
+                                            <li>
+                                                <img src="assets/default/images/momo.png" alt="MoMo">
+                                                <strong>MOMO: </strong>
+                                                <span>0367742346 - </span>
+                                                <span class="account-name">LE VAN MANH</span>
+                                                <i class="fas fa-copy copy-icon" data-copy="0367742346"></i>
+                                            </li>
+                                            <li>
+                                                <img src="assets/default/images/mbbank.jpeg" alt="MB Bank">
+                                                <strong>MBANK: </strong>
+                                                <span>0367742346 - </span>
+                                                <span class="account-name">LE VAN MANH</span>
+                                                <i class="fas fa-copy copy-icon" data-copy="0367742346"></i>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                
+                                <!-- Key Display Box -->
+                                <div class="key-display">
+                                    <code id="keyText">Loading key...</code>
+                                    <button class="copy-btn" data-copy="" onclick="copyToClipboard(document.getElementById('keyText').innerText)">
+                                        <i class="fas fa-copy"></i> Copy
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>© 2025 KEDO Tools - Tất cả các quyền được bảo lưu</p>
+        </div>
+    </footer>
+
+    <!-- Toast notification container -->
+    <div id="toast-container" class="toast-container"></div>
+
+    <!-- Snowflakes Animation -->
+    <div class="snowflakes" aria-hidden="true">
+        <div class="snowflake">🍉</div>
+        <div class="snowflake">🍈</div>
+        <div class="snowflake">🍄</div>
+        <div class="snowflake">🍐</div>
+        <div class="snowflake">⭐</div>
+        <div class="snowflake">❤️</div>
+        <div class="snowflake">☘️</div>
+        <div class="snowflake">🌸</div>
+        <div class="snowflake">🌷</div>
+        <div class="snowflake">💕</div>
+        <div class="snowflake">💌</div>
+        <div class="snowflake">💮</div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
